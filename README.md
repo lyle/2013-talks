@@ -19,6 +19,7 @@ This repo is hosted as a website at http://2013-talks.lyle.troxell.com .
 * [2013-06-14 Web-5 Conference, Béziers, France](http://conf2013.web-5.org/speaker/lyle-troxell-get-the-server-side-out-of-the-way-with-wakanda/) - [web-5.html](web-5.html)
 * [2013-05-21 Seattle JS](http://www.meetup.com/seattlejs/events/117660102/) - [seattle.html](seattle.html)
 * [2013-05-20  Seattle Web App Developers Group](http://www.meetup.com/Seattle-Web-App-Developers-Group/events/115969082/) - [seattle.html](seattle.html)
+* [How to Run a Front-end Engineering Team - Great WebDev Debates for April 18th](http://www.meetup.com/The-Great-WebDev-Debates/events/106766052/) - At PayPal, I was the moderator.
 * [2013-03-19 Lyle Leaves UCSC, Santa Cruz](http://lyle.troxell.com/talks/2013/ucsc/)
 
 ---
