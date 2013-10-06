@@ -9,13 +9,13 @@ This repo is hosted as a website at http://2013-talks.lyle.troxell.com .
 -Lyle
 
 ## Upcoming Talks
-* [2013-10-5/6 Silicon Valley Code Camp](http://www.siliconvalley-codecamp.com/Presenter/2013/Session/Lyle-Troxell-10271)
 * [2013-10-10 Responsive Design vs Adaptive Design](http://www.meetup.com/The-Great-WebDev-Debates/events/136998692/) - at eBay, Moderator
 * [2013-10- 4D Summit, Los Vegas, NV - hosting event](http://www.4d.com/company/events/summit2013.html)
 * [2013-10-25 JS.everywhere(2013), San Fransisco, CA -  hosting event](http://jseverywere.org)
 
 ## Past Talks
 
+* [2013-10-5/6 Silicon Valley Code Camp](http://www.siliconvalley-codecamp.com/Presenter/2013/Session/Lyle-Troxell-10271) - [CodeCamp.html]
 * 2013-09-12 [Digital Arts and New Media](http://digitalarts.ucsc.edu), University of California, Santa Cruz - [http://github.com/lyle/DANM.JOY]
 * 2013-07-24 NoVa.JS, Washington DC - [NoVa.JS Meetup](http://www.meetup.com/NoVaJS/) - [NoVaJS.html](NoVaJS.html)
 * 2013-07-25 NYC.JS, New York, NY - [NYC.JS Meetup](http://www.meetup.com/NYC-JS/) - [NYCJS.html](NYCJS.html)
