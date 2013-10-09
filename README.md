@@ -15,7 +15,7 @@ This repo is hosted as a website at http://2013-talks.lyle.troxell.com .
 
 ## Past Talks
 
-* [2013-10-5/6 Silicon Valley Code Camp](http://www.siliconvalley-codecamp.com/Presenter/2013/Session/Lyle-Troxell-10271) - [CodeCamp.html](CodeCamp.html)
+* [2013-10-5/6 Silicon Valley Code Camp](http://www.siliconvalley-codecamp.com/Presenter/2013/Session/Lyle-Troxell-10271) - [Slides CodeCamp.html](CodeCamp.html) - [SlideShare](http://www.slideshare.net/troxell/code-camp-building-a-glass-app-with-wakanda)
 * 2013-09-12 [Digital Arts and New Media](http://digitalarts.ucsc.edu), University of California, Santa Cruz - [http://github.com/lyle/DANM.JOY]
 * 2013-07-24 NoVa.JS, Washington DC - [NoVa.JS Meetup](http://www.meetup.com/NoVaJS/) - [NoVaJS.html](NoVaJS.html)
 * 2013-07-25 NYC.JS, New York, NY - [NYC.JS Meetup](http://www.meetup.com/NYC-JS/) - [NYCJS.html](NYCJS.html)
