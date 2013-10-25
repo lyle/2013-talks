@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>JS.everywhere(2013) - Glass Wakanda</title>
+        <meta content="WakandaDB - a SSJS webserver and Dataengin.">
+        <meta content="Hakim El Hattab" name="author">
+        <meta content="yes" name="apple-mobile-web-app-capable"/>
+        <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"/>
+        <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+        <link href="/css/reveal.min.css" rel="stylesheet">
+        <link href="/css/theme/solarized.css" id="theme" rel="stylesheet">
+        <!-- For syntax highlighting -->
+        <link href="/lib/css/zenburn.css" rel="stylesheet">
+        <!-- If the query includes 'print-pdf', use the PDF print sheet -->
+        <script>
+            document.write('<link rel="stylesheet" href="/css/print/' + (window.location.search.match(/print-pdf/gi) ? 'pdf' : 'paper') + '.css" type="text/css" media="print">');
+        </script><!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+        
+        <style type="text/css">
+        .reveal {
+          font-family: "Open Sans", sans-serif;
+        }
+        .reveal h1,
+        .reveal h2,
+        .reveal h3,
+        .reveal h4,
+        .reveal h5,
+        .reveal h6 {
+          text-transform: none;
+        }
+        .reveal section img {
+          border:none; 
+        }
+        .wak{
+          color:#fbf305;
+        }
+        .wak-unfocused{
+          color:#5e5e5d;
+        }
+        .reveal section img{box-shadow:none;}
+        .forcelist h3{text-align:left;}
+        #circle{
+          border: 2px solid red;
+          width: 30px;
+          height: 30px;
+          position: relative;
+          -webkit-border-radius: 30px;
+          -moz-border-radius: 30px;
+          border-radius: 30px;
+          left: 245px;
+          top: -234px;
+          display:none;
+        }
+        
+        </style>
+    </head>
+    <body>
+        <div class="reveal">
+          <div class="slides">
+            <section>
+              <img src="images/jse_logo_black_200.png" width="200" height="200">
+              <h1>JS in Glass</h2>
+              <p></p>
+            </section>
+            <section data-transition="fade">
+              <h3 class="fragment">Android on my Face</h3>
+              <h1>Google Glass</h1>
+              <aside class="notes" data-markdown>
+                * 5MP/720p & 16GB/12GB 
+                * Bluetooth & Wifi
+                * Mic & Speaker (bone induction)
+                * Tilt & Eye sensors
+              </aside>
+            </section>
+            <section>
+              <h2>Glass Timeline</h2>
+              <h4 class="fragment" data-fragment-index="0"><span class="fragment"data-fragment-index="2">[settings]</span>  <span class="fragment" data-fragment-index="1">[now]</span> <b>["ok glass"]</b> <span class="fragment" data-fragment-index="3">[more stuff]</span> <span class="fragment" data-fragment-index="4">[back]</span><span class="fragment" data-fragment-index="5">[in]</span><span class="fragment" data-fragment-index="6">[time][.]</span></h4>
+              <h4 class="fragment" data-fragment-index="7"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> [google] <span class="fragment"data-fragment-index="8">[take a picture] [record ...</span></h4>
+              <aside class="notes" data-markdown>
+                  * Row of Cards
+                </aside>
+            </section>
+            <section data-transition="fade">
+
+              <div>
+                <img src="images/jse/thanks_for_attending.png">
+              </div>
+              <pre  class="fragment" data-fragment-index="0"><code data-trim>
+{
+  "text": "Thanks for attending JS.everywhere(2013)",
+  "notification": {
+    "level": "DEFAULT"
+  }
+}
+              </code></pre>
+              <aside class="notes" data-markdown>
+              * Post a card to the Timeline = JSON
+              </aside>
+            </section>
+            <section data-transition="fade">
+
+              <pre><code data-trim>
+{ "html": '...'},
+  "notification": {
+    "level": "DEFAULT"
+  }
+}
+              </code></pre>
+              <pre class="fragment" data-fragment-index="0"><code data-trim>
+&lt;article>
+  &lt;section>
+    &lt;p class="text-auto-size">It has been a real 
+      &lt;strong class="yellow">pleasure&lt;/strong>
+      to host this event. I hope that &lt;em class="blue">you&lt;/em>
+      have enjoyed yourself.&lt;/p>
+  &lt;/section>
+&lt;/article>
+              </code></pre>
+              <div  class="fragment" data-fragment-index="1">
+                <img src="images/jse/html_in_json.png">
+              </div>
+              <aside class="notes" data-markdown>
+              * Or, get fancy and use some HTML
+              * at about 3min close of this card
+              </aside>
+            </section>
+              <section data-transition="fade">
+
+              <pre><code data-trim>
+{
+  "menuItems": [
+    {"action": "SHARE"},
+    {"action": "DELETE"},
+    {"action": "TOGGLE_PINNED"}
+  ],
+  "notification": {
+    "level": "DEFAULT"
+  }
+}
+              </code></pre>
+              <aside class="notes" data-markdown>
+              * besides the content - their are also menue choices
+              </aside>
+            </section>
+              <section data-transition="fade">
+              <p class="fragment" data-fragment-index="0">Let me show you all how it works...</p>
+
+              <aside class="notes" data-markdown>
+              * "I wish I could show you all how it works."
+              * at about 5min
+              * Show them generally...Take a pic, Share
+              * Mention Contacts - show them some...
+              * Wakanda Glass
+              </aside>
+            </section>
+          </section>
+          <section data-transition="fade">
+              <section>
+                <h1>Lyle Troxell</h1>
+                <h2>Developer Advocate for wakandaDB</h2>
+                <br />
+                <h1>@lyle <img src="images/bs-docs-twitter-github.png" width="250" alt="Twitter & Github" style="box-shadow:none;vertical-align: -22px;"></h1>
+
+                <aside class="notes">
+                  * I am from Santa Cruz, California. - on the coast near Sillicon Valley
+                  * I live in a redwood forest -
+                
+                </aside>
+              </section>
+            </section>
+            <section>
+
+              <section>
+                <img src="photos/geekspeak/episode.jpeg" class="fragment" data-fragment-index="1" />
+<img src="photos/geekspeak/episode2.jpeg" class="fragment" data-fragment-index="2" />
+<img src="photos/geekspeak/episode3.jpeg" class="fragment" data-fragment-index="3" />
+<img src="photos/geekspeak/episode4.jpeg" class="fragment" data-fragment-index="4" />
+<img src="photos/geekspeak/episode5.jpeg" class="fragment" data-fragment-index="5" />
+<img src="photos/geekspeak/episode6.jpeg" class="fragment" data-fragment-index="6" />
+<img src="photos/geekspeak/episode7.jpeg" class="fragment" data-fragment-index="7" />
+<img src="photos/geekspeak/episode8.jpeg" class="fragment" data-fragment-index="8" />
+<img src="photos/geekspeak/episode9.jpeg" class="fragment" data-fragment-index="9" />
+<img src="photos/geekspeak/episode10.jpeg" class="fragment" data-fragment-index="10" width="160" height="160"/>
+<img src="photos/geekspeak/episode11.jpeg" class="fragment" data-fragment-index="11" />
+<img src="photos/geekspeak/episode13.jpeg" class="fragment" data-fragment-index="13" />
+<img src="photos/geekspeak/episode14.jpeg" class="fragment" data-fragment-index="14" width="160" height="160"/>
+<img src="photos/geekspeak/episode15.jpeg" class="fragment" data-fragment-index="15" width="160" height="160"/>
+<img src="photos/geekspeak/episode16.jpeg" class="fragment" data-fragment-index="16" width="160" height="160"/>
+              </section>
+              <section>
+                <img src="photos/geekspeak/gs_logo.png" style="border:2px solid black;" />
+                <p class="fragment" data-fragment-index="0" >http://GeekSpeak.org</p>
+
+              </section>
+
+            </section>
+            <section>
+              <section data-state="blackout" data-transition="fade"><img src="photos/glass/showing/2013-06-30_4107.jpg"></section>
+              <section data-state="blackout" data-transition="fade"><img src="photos/glass/showing/2013-06-30_4116.jpg"></section>
+              <section data-autoslide="500" data-state="blackout" data-transition="fade"><img src="photos/glass/showing/IMG_0218.jpg"></section>
+              <section data-autoslide="500" data-state="blackout" data-transition="fade"><img src="photos/glass/showing/IMG_0222.jpg"></section>
+              <section data-autoslide="500" data-state="blackout" data-transition="fade"><img src="photos/glass/showing/IMG_0267.jpg"></section>
+              <section data-autoslide="500" data-state="blackout" data-transition="fade"><img src="photos/glass/showing/IMG_0270.jpg"></section>
+              <section data-autoslide="500" data-state="blackout" data-transition="fade"><img src="photos/glass/showing/IMG_0272.jpg"></section>
+              <section data-autoslide="500" data-state="blackout" data-transition="fade"><img src="photos/glass/showing/IMG_0280.jpg"></section>
+              <section data-autoslide="500" data-state="blackout" data-transition="fade"><img src="photos/glass/showing/IMG_0187.jpg"></section>
+              <section data-autoslide="500" data-state="blackout" data-transition="fade"><img src="photos/glass/showing/IMG_0191.jpg"></section>
+              <section data-state="blackout" data-transition="fade"><img src="photos/glass/showing/2013-06-30_4113.jpg"></section>
+              <section data-state="blackout" data-transition="fade"><img src="photos/glass/me/20130706_110430_462.jpg"></section>
+              <section data-autoslide="800" data-state="blackout" data-transition="fade"><img src="photos/glass/me/20130709_090323_700.jpg"></section>
+              <section data-autoslide="800" data-state="blackout" data-transition="fade"><img src="photos/glass/me/20130710_120740_229.jpg"></section>
+              <section data-autoslide="500" data-state="blackout" data-transition="fade"><img src="photos/glass/me/20130713_120822_851.jpg"></section>
+              <section data-autoslide="500" data-state="blackout" data-transition="fade"><img src="photos/glass/me/20130713_125239_711.jpg"></section>
+              <section data-autoslide="400" data-state="blackout" data-transition="fade"><img src="photos/glass/me/20130713_164411_470.jpg"></section>
+              <section data-autoslide="400" data-state="blackout" data-transition="fade"><img src="photos/glass/me/20130714_170741_432.jpg"></section>
+              <section data-autoslide="400" data-state="blackout" data-transition="fade"><img src="photos/glass/me/20130714_181634_643.jpg"></section>
+              <section data-autoslide="400" data-state="blackout" data-transition="fade"><img src="photos/glass/me/20130716_064657_756.jpg"></section>
+              <section data-autoslide="400" data-state="blackout" data-transition="fade"><img src="photos/glass/me/20130716_064952_343.jpg"></section>
+              <section data-autoslide="400" data-state="blackout" data-transition="fade"><img src="photos/glass/me/20130716_073521_861.jpg"></section>
+              <section data-autoslide="300" data-state="blackout" data-transition="fade"><img src="photos/glass/me/20130716_134038_032.jpg"></section>
+              <section data-autoslide="300" data-state="blackout" data-transition="fade"><img src="photos/glass/me/20130716_183234_490.jpg"></section>
+              <section data-autoslide="300" data-state="blackout" data-transition="fade"><img src="photos/glass/me/20130716_183755_124.jpg"></section>
+              <section data-autoslide="300" data-state="blackout" data-transition="fade"><img src="photos/glass/me/20130717_143740_994.jpg"></section>
+              <section data-autoslide="200" data-state="blackout" data-transition="fade"><img src="photos/glass/me/20130717_143909_739.jpg"></section>
+              <section data-autoslide="200" data-state="blackout" data-transition="fade"><img src="photos/glass/me/20130717_160044_909.jpg"></section>
+              <section data-autoslide="200" data-state="blackout" data-transition="fade"><img src="photos/glass/me/20130717_194012_828.jpg"></section>
+              <section data-autoslide="100" data-state="blackout" data-transition="fade"><img src="photos/glass/me/20130719_181631_949.jpg"></section>
+              <section data-autoslide="100" data-state="blackout" data-transition="fade"><img src="photos/glass/me/20130720_094359_937.jpg"></section>
+              <section data-autoslide="100" data-state="blackout" data-transition="fade"><img src="photos/glass/me/20130720_115627_807.jpg"></section>
+              <section data-autoslide="100" data-state="blackout" data-transition="fade"><img src="photos/glass/me/20130721_170243_485.jpg"></section>
+              <section data-autoslide="100" data-state="blackout" data-transition="fade"><img src="photos/glass/me/20130630_113313_228.jpg"></section>
+              <section data-autoslide="100" data-state="blackout" data-transition="fade"><img src="photos/glass/me/20130630_114546_483.jpg"></section>
+              <section data-autoslide="100" data-state="blackout" data-transition="fade"><img src="photos/glass/me/20130702_101859_805.jpg"></section>
+              
+            </section>
+            
+
+            
+            <section>
+
+              <section>
+                <h1>Meetings with Strangers</h1>
+                <br>
+                  <aside class="notes" data-markdown>
+                    * share it?
+                    * Twitter, Google +, Facebook?
+                  </aside>
+              </section>
+            </section>
+            <section>
+                <section>
+                      <h2>glass.wakanda.org</h2>
+                      <h1><span class="fragment" data-fragment-index="3">Google APIs</span>
+                      <span class="fragment" data-fragment-index="2" style="font-size:.4em;">&</span>
+                      <span class="fragment" data-fragment-index="1">wakandaDB</span></h1>
+                      <aside class="notes">
+                        
+                      </aside>
+                </section>
+                  <section>
+                      <h2>Google OAuth2</h2>
+                      <img src="images/glass/oauth2_server_to_server.png" class="fragment">
+                      <aside class="notes">
+                      * to use Google API Services you need to authenticate with OAuth2 
+                      * google has great documentation 
+                      </aside>
+                  </section>
+                  <section  data-transition="zoom" data-transition-speed="fast">
+                      <img src="images/glass/oauth2_server_to_server_zoom.png">
+                      <aside class="notes">
+                      
+                      </aside>
+                  </section>
+                  <section data-transition-speed="fast">
+                      <img src="images/jse_logo_black_200.png">
+                      <aside class="notes">
+                      </aside>
+                  </section>
+                  <section>
+                    <h2>OAuth2 - Google - Wakanda</h2>
+                    <h1 class="fragment"data-fragment-index="0">JavaScript</h1>
+                    <div class="fragment"data-fragment-index="1">
+                       <h2>ComondJS module</h2>
+                      <p>https://github.com/lyle/wakanda-googleOAuth2-client</p>
+                    </div>
+                  </section>
+                  <section>
+                    <h2>Show some Code</h2>
+                    <div class="fragment"data-fragment-index="1">
+                      <p>follow along at...</p>
+                      <h3>github.com/lyle/GlassWakanda</h3>
+                    </div>
+                  </section>
+            </section>
+            
+            <section>
+              <section>
+<pre><code contenteditable style="max-height: 700px">
+
+  GoogleAccess = new DataClass("GoogleAccessCollection" ,"public");
+  GoogleAccess.ID = new Attribute("storage", "long", "key");
+
+  GoogleAccess.access_token = new Attribute("storage", "string");
+  GoogleAccess.token_type = new Attribute("storage", "string");
+  GoogleAccess.refresh_token = new Attribute("storage", "string");
+
+</code></pre>
+              </section>
+              <section>
+<pre><code contenteditable style="max-height: 700px">
+  var entityMethods;
+  entityMethods = exports;
+
+  var googleOAuth2 = require('GoogleOAuth2/GoogleOAuth2').OAuth2;
+  var glassApiData = require('ApiAppData').glassUser;
+
+  var OAuth2Glass = new googleOAuth2(glassApiData.client_id,
+    glassApiData.client_secret,
+    glassApiData.redirect_uri,
+    {scope:glassApiData.scope,
+      approval_prompt:glassApiData.approval_prompt,
+      access_type:"offline",
+      state: 'glass'
+    });
+    
+</code></pre>
+              </section>
+              <section>
+<pre><code contenteditable style="max-height: 700px">
+
+  entityMethods.getRefreshedAccessToken = function (){
+    var newTokenSet;
+    if (this.refresh_token) {
+      newTokenSet = OAuth2Glass.refreshAccessToken(this.refresh_token);
+      if (newTokenSet && newTokenSet.error){
+        return false;
+      }
+      if (newTokenSet && newTokenSet.access_token){
+        this.access_token = newTokenSet.access_token;
+        this.save();
+        return this.access_token;
+      }
+    }else{
+      return false;
+    }
+    
+  }; 
+</code></pre>
+              </section>
+                  <section>
+                    <h1 class="wak">Wakanda</h1>
+                    <div class="forcelist">
+                      <h3>Wakanda Application Framework</h3>
+                      <h3>Wakanda Studio</h3>
+                      <h3>WakandaDB</h3>
+                    </div>
+                  </section>
+                  <section>
+                      <h2>Wakanda Application Framework</h2>
+
+                      <img src="images/waf_diagram.png" alt="flow">
+                      
+                  </section>
+                  <section>
+                      <h2>Wakanda Studio</h2>
+                      <div>
+                          <ul>
+                              <li>Data Modeler -> JSON</li>
+                              <li>IDE</li>
+                              <li>Start/Stop wakandaDB</li>
+                          </ul>
+                      </div>
+                  </section>
+                  <section>
+                    <h1 class="wak">wakandaDB</h1>
+                    <div style="width:50%;float:left;">
+                      <div>Database</div>
+                      <h3 class="fragment" data-fragment-index="0">Object-Relational</h3>
+                      <h3 class="fragment" data-fragment-index="1">JavaScript Objects</h3>
+                      <h3 class="fragment" data-fragment-index="2">Indexed</h3>
+                      <h3 class="fragment" data-fragment-index="3">Transactional</h3>
+                    </div>
+                    <div style="width:50%;float:left;">
+                      <div>Web Server</div>
+                      <h3 class="fragment" data-fragment-index="4">RESTful Interface</h3>
+                      <h3 class="fragment" data-fragment-index="5">JavaScript SS</h3>
+                      <h3 class="fragment" data-fragment-index="6">Multi-Threaded</h3>
+                      <h3 class="fragment" data-fragment-index="7">Services with CommonJS</h3>
+                     </div>
+                  </section>
+              </section>
+              
+              <section><div>wakandaDB scheama</div><pre><code data-trim contenteditable class="JSON" style="max-height: 700px">
+  {"dataClasses": [
+    { "name": "Chicken",
+      "className": "Chicken",
+      "collectionName": "Chickens",
+      "scope": "public",
+      "attributes": [
+        { "name": "ID",
+          "kind": "storage",
+          "scope": "public",
+          "unique": true,
+          "autosequence": true,
+          "type": "long",
+          "primKey": true
+        },
+        { "name": "name",
+          "kind": "storage",
+          "scope": "public",
+          "type": "string"
+        },
+        { "name": "hatchDate",
+          "kind": "storage",
+          "scope": "public",
+          "type": "date",
+          "simpleDate": false
+          }
+        }
+      ]
+    }
+  ]}</code></pre></section>
+                  
+                  
+              </section>
+              
+
+            
+              
+
+                
+              
+              <section>
+                
+                
+              </section>
+              
+          </div>
+
+        </div>
+        <script src="/lib/js/head.min.js"></script>
+        <script src="/js/reveal.min.js"></script>
+        <script>
+            // Full list of configuration options available here:
+            // https://github.com/hakimel/reveal.js#configuration
+            Reveal.initialize({
+                controls: true,
+                progress: true,
+                history: true,
+                center: true,
+                width: 1280,
+                height: 720,
+                theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+                transition: Reveal.getQueryHash().transition || 'default', 
+            
+                // Optional libraries used to extend on reveal.js
+                dependencies: [
+                    {
+                        src: 'lib/js/classList.js',
+                        condition: function () {
+                            return !document.body.classList;
+                        }
+                    }, {
+                        src: 'plugin/markdown/marked.js',
+                        condition: function () {
+                            return !!document.querySelector('[data-markdown]');
+                        }
+                    }, {
+                        src: 'plugin/markdown/markdown.js',
+                        condition: function () {
+                            return !!document.querySelector('[data-markdown]');
+                        }
+                    }, {
+                        src: 'plugin/highlight/highlight.js',
+                        async: true,
+                        callback: function () {
+                            hljs.initHighlightingOnLoad();
+                        }
+                    }, {
+                        src: 'plugin/zoom-js/zoom.js',
+                        async: true,
+                        condition: function () {
+                            return !!document.body.classList;
+                        }
+                    }, {
+                        src: 'plugin/notes/notes.js',
+                        async: true,
+                        condition: function () {
+                            return !!document.body.classList;
+                        }
+                    }
+                    // { src: 'plugin/search/search.js', async: true, condition: function() { return !!document.body.classList; } }
+                    // { src: 'plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
+                ],
+                
+                
+            });
+            Reveal.addEventListener( 'calmap', function() {
+              circleCal = document.getElementById('circle');
+              setTimeout(function () {
+                circleCal.style.display="block";
+              }, 1000);
+              
+              
+            }, false );
+            Reveal.addEventListener( 'playchicken', function() {
+              var varChickVid = document.getElementById('chickenVid');
+              varChickVid.play();
+              varChickVid.addEventListener("ended",function(){
+                Reveal.down();
+              });
+            }, false );
+        </script>
+    </body>
+</html>
