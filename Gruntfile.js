@@ -109,12 +109,12 @@ module.exports = function(grunt) {
       all: {
         files: [
             {
-              expand: true,
+              expand: false,
               src: 'README.md',
-              dest: '.',
-              ext: '.html'
+              dest: 'index.html'
             }
-          ]
+          ],
+         options:{template: 'template.html'}
       }
     }
 	});

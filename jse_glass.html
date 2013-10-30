@@ -281,22 +281,102 @@
                   </section>
                   <section>
                     <h2>OAuth2 - Google - Wakanda</h2>
-                    <h1 class="fragment"data-fragment-index="0">JavaScript</h1>
                     <div class="fragment"data-fragment-index="1">
-                       <h2>ComondJS module</h2>
+                      <h2>ComondJS module</h2>
                       <p>https://github.com/lyle/wakanda-googleOAuth2-client</p>
                     </div>
                   </section>
                   <section>
-                    <h2>Show some Code</h2>
-                    <div class="fragment"data-fragment-index="1">
-                      <p>follow along at...</p>
-                      <h3>github.com/lyle/GlassWakanda</h3>
+                    <h2>Register Your App</h2>
+                    <ul>
+                    <li>client_id</li>
+                    <li>client_secret</li>
+                    <li>redirect_uri</li>
+                    </ul>
+                  </section>
+                  <section>
+
+<pre><code>
+  function OAuth2(client_id, client_secret, redirect_uri, options){
+    //...
+  }
+  OAuth2.prototype.getAuthenticateURL = function(option_arg){ 
+    //...
+  }
+  OAuth2.prototype.getAccessData = function(code){ 
+    //... 
+  }
+  OAuth2.prototype.refreshAccessToken = function(refresh_token){
+    //...
+  }
+
+  exports.OAuth2 = OAuth2;
+
+</code></pre>
+<p>https://github.com/lyle/wakanda-googleOAuth2-client</p>
+              </section>
+            </section>
+            <section>
+              <section>
+                    <h1 class="wak">Wakanda</h1>
+                    <div class="forcelist">
+                      <h3>Wakanda Application Framework</h3>
+                      <h3>Wakanda Studio</h3>
+                      <h3>wakandaDB</h3>
                     </div>
                   </section>
+                  
+                  <section>
+                    <h1 class="wak">wakandaDB</h1>
+                    <div style="width:50%;float:left;">
+                      <div>Database</div>
+                      <h3 class="fragment" data-fragment-index="0">Object-Relational</h3>
+                      <h3 class="fragment" data-fragment-index="1">JavaScript Objects</h3>
+                      <h3 class="fragment" data-fragment-index="2">Indexed</h3>
+                      <h3 class="fragment" data-fragment-index="3">Transactional</h3>
+                    </div>
+                    <div style="width:50%;float:left;">
+                      <div>Web Server</div>
+                      <h3 class="fragment" data-fragment-index="4">RESTful Interface</h3>
+                      <h3 class="fragment" data-fragment-index="5">JavaScript SS</h3>
+                      <h3 class="fragment" data-fragment-index="6">Multi-Threaded</h3>
+                      <h3 class="fragment" data-fragment-index="7">Services with CommonJS</h3>
+                     </div>
+                  </section>
+
             </section>
-            
             <section>
+              <section><div>wakandaDB scheama</div><pre><code data-trim contenteditable class="JSON" style="max-height: 700px">
+  {"dataClasses": [
+    { "name": "Chicken",
+      "className": "Chicken",
+      "collectionName": "Chickens",
+      "scope": "public",
+      "attributes": [
+        { "name": "ID",
+          "kind": "storage",
+          "scope": "public",
+          "unique": true,
+          "autosequence": true,
+          "type": "long",
+          "primKey": true
+        },
+        { "name": "name",
+          "kind": "storage",
+          "scope": "public",
+          "type": "string"
+        },
+        { "name": "hatchDate",
+          "kind": "storage",
+          "scope": "public",
+          "type": "date",
+          "simpleDate": false
+          }
+        }
+      ]
+    }
+  ]}</code></pre></section>
+                  
               <section>
 <pre><code contenteditable style="max-height: 700px">
 
@@ -350,93 +430,20 @@
   }; 
 </code></pre>
               </section>
-                  <section>
-                    <h1 class="wak">Wakanda</h1>
-                    <div class="forcelist">
-                      <h3>Wakanda Application Framework</h3>
-                      <h3>Wakanda Studio</h3>
-                      <h3>WakandaDB</h3>
-                    </div>
-                  </section>
-                  <section>
-                      <h2>Wakanda Application Framework</h2>
-
-                      <img src="images/waf_diagram.png" alt="flow">
-                      
-                  </section>
-                  <section>
-                      <h2>Wakanda Studio</h2>
-                      <div>
-                          <ul>
-                              <li>Data Modeler -> JSON</li>
-                              <li>IDE</li>
-                              <li>Start/Stop wakandaDB</li>
-                          </ul>
-                      </div>
-                  </section>
-                  <section>
-                    <h1 class="wak">wakandaDB</h1>
-                    <div style="width:50%;float:left;">
-                      <div>Database</div>
-                      <h3 class="fragment" data-fragment-index="0">Object-Relational</h3>
-                      <h3 class="fragment" data-fragment-index="1">JavaScript Objects</h3>
-                      <h3 class="fragment" data-fragment-index="2">Indexed</h3>
-                      <h3 class="fragment" data-fragment-index="3">Transactional</h3>
-                    </div>
-                    <div style="width:50%;float:left;">
-                      <div>Web Server</div>
-                      <h3 class="fragment" data-fragment-index="4">RESTful Interface</h3>
-                      <h3 class="fragment" data-fragment-index="5">JavaScript SS</h3>
-                      <h3 class="fragment" data-fragment-index="6">Multi-Threaded</h3>
-                      <h3 class="fragment" data-fragment-index="7">Services with CommonJS</h3>
-                     </div>
-                  </section>
-              </section>
-              
-              <section><div>wakandaDB scheama</div><pre><code data-trim contenteditable class="JSON" style="max-height: 700px">
-  {"dataClasses": [
-    { "name": "Chicken",
-      "className": "Chicken",
-      "collectionName": "Chickens",
-      "scope": "public",
-      "attributes": [
-        { "name": "ID",
-          "kind": "storage",
-          "scope": "public",
-          "unique": true,
-          "autosequence": true,
-          "type": "long",
-          "primKey": true
-        },
-        { "name": "name",
-          "kind": "storage",
-          "scope": "public",
-          "type": "string"
-        },
-        { "name": "hatchDate",
-          "kind": "storage",
-          "scope": "public",
-          "type": "date",
-          "simpleDate": false
-          }
-        }
-      ]
-    }
-  ]}</code></pre></section>
                   
+              
                   
               </section>
-              
+              <section>
+                <img src="images/glass/glass_app.png" alt="">
+                <p>glass.wakanda.org</p>
+              </section>
 
             
               
 
                 
               
-              <section>
-                
-                
-              </section>
               
           </div>
 
