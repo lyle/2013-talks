@@ -9,11 +9,12 @@ This repo is hosted as a website at http://2013-talks.lyle.troxell.com .
 -Lyle
 
 ## Upcoming Talks
-* 2013-11-19 4D Dev Conf, Munich Germany
 * 2013-11-26-27 4D Summit EU, Paris France
 
 ## Past Talks
-* 2013-10-25 JS.everywhere(2013), San Fransisco, CA - [JS in Glass](jse_glass.html) - my talk
+* [2013-11-19 4D Dev Conf, Munich Germany](http://www.4d.com/de/company/events/devcon2013.html) - [Glass Talk](4D_Entwicklerkonferenz.html)
+* [2013-11-19 4D Dev Conf, Munich Germany](http://www.4d.com/de/company/events/devcon2013.html) - [4D Mobile Talk - keynote file](/media/2013-smmt-keynote-4D-Mobile.key)
+* [2013-10-25 JS.everywhere(2013), San Fransisco, CA](http://jseverywhere.org/) - [JS in Glass](jse_glass.html) - my talk
 * [2013-10-25 JS.everywhere(2013), San Fransisco, CA -  hosting event](http://jseverywhere.org) - [Generic Slides](jse.html)
 * [2013-10- 4D Summit, Los Vegas, NV - hosting event](http://www.4d.com/company/events/summit2013.html)
 * [2013-10-10 Responsive Design vs Adaptive Design](http://www.meetup.com/The-Great-WebDev-Debates/events/136998692/) - [my Slides ResponsiveAdaptive.html](ResponsiveAdaptive.html) - at eBay, Moderator
